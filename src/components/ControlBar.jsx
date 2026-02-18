@@ -42,16 +42,18 @@ export default function ControlBar({
       </div>
 
       {/* Center: Main Controls */}
-      <div className="flex items-center gap-8">
+      {/* [BUG - LAYOUT] Flex direction changed to column, breaks horizontal control bar. [FIX] Remove flex-col */}
+      <div className="flex flex-col items-center gap-8">
         
         {/* Mute Toggle */}
+        {/* [BUG - TYPO] bg-red-6 and bg-emerald-6 are invalid classes (should be 600 not 6). [FIX] Change to bg-red-600 and bg-emerald-600 */}
         <div className="group relative">
           <button 
             onClick={onToggleMute}
             className={`p-4 rounded-full transition-all duration-200 transform hover:scale-110 font-bold shadow-xl ${
               userMuted 
-                ? 'bg-red-600 hover:bg-red-700 shadow-red-600/50 text-white' 
-                : 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-600/50 text-white'
+                ? 'bg-red-6 hover:bg-red-700 shadow-red-600/50 text-white' 
+                : 'bg-emerald-6 hover:bg-emerald-700 shadow-emerald-600/50 text-white'
             }`}
             title={userMuted ? "Unmute Microphone" : "Mute Microphone"}
           >

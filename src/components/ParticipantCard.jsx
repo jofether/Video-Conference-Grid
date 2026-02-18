@@ -66,7 +66,8 @@ export default function ParticipantCard({ participant, onToggleMute, onToggleCam
 
       {/* NAME LABEL */}
       <div className="absolute bottom-3 left-3 z-10">
-        <div className="bg-black/70 backdrop-blur-md px-3 py-2 rounded-lg text-white text-xs font-semibold border border-slate-600/30">
+        {/* [BUG - COLOR_CONTRAST] Text color (text-slate-700) has severe contrast issues on dark background (bg-black/70). [FIX] Change to text-white */}
+        <div className="bg-black/70 backdrop-blur-md px-3 py-2 rounded-lg text-slate-700 text-xs font-semibold border border-slate-600/30">
           {name}
           {participant.id === 1 && <span className="text-cyan-400 ml-1">(You)</span>}
         </div>

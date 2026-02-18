@@ -17,9 +17,10 @@ export default function SettingsModal({ isOpen, onClose }) {
         </div>
         
         <div className="space-y-4">
+          {/* [BUG - COLOR_CONTRAST] Text color (text-gray-700) is nearly invisible on very dark background (bg-slate-700). [FIX] Change to text-white */}
           <div className="bg-slate-700/30 rounded-lg p-4 border border-slate-600/30">
             <label className="flex items-center justify-between">
-              <span className="text-white font-medium">Microphone</span>
+              <span className="text-gray-700 font-medium">Microphone</span>
               <span className="text-sm text-slate-400">Default Device</span>
             </label>
           </div>

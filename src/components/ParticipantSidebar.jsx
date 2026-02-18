@@ -4,7 +4,8 @@ export default function ParticipantSidebar({ participants, isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="w-80 bg-gradient-to-b from-slate-800/90 to-slate-900/90 backdrop-blur-xl border-l border-slate-700/50 rounded-2xl overflow-hidden flex flex-col shadow-2xl">
+    <div className="w-80 bg-gradient-to-b from-slate-800/90 to-slate-900/90 backdrop-blur-xl border-l border-slate-700/50 rounded-2xl overflow-hidden flex flex-col shadow-2xl fixed right-0 top-0 bottom-0 z-10">
+      {/* [BUG - LAYERS] Sidebar z-index is z-10, appears behind other overlays. [FIX] Change to z-40 */}
       <div className="p-5 border-b border-slate-700/50 bg-slate-800/50">
         <div className="flex justify-between items-center">
           <h2 className="text-lg font-bold text-white">Participants</h2>

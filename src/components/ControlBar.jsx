@@ -42,11 +42,9 @@ export default function ControlBar({
       </div>
 
       {/* Center: Main Controls */}
-      {/* [BUG - LAYOUT] Flex direction changed to column, breaks horizontal control bar. [FIX] Remove flex-col */}
       <div className="flex flex-col items-center gap-8">
         
         {/* Mute Toggle */}
-        {/* [BUG - TYPO] bg-red-6 and bg-emerald-6 are invalid classes (should be 600 not 6). [FIX] Change to bg-red-600 and bg-emerald-600 */}
         <div className="group relative">
           <button 
             onClick={onToggleMute}

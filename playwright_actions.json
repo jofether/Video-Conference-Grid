@@ -1,0 +1,12 @@
+{
+  "actions": [
+    {
+      "name": "bug-8-OpenParticipantSidebar",
+      "selector": "footer button[title=\"Participants\"]"
+    },
+    {
+      "name": "bug-9-OpenSettingsModal",
+      "selector": "footer button[title=\"Settings\"]"
+    }
+  ]
+}

@@ -31,7 +31,7 @@
       "line_number": 53,
       "neg_code": "? 'bg-red-600 hover:bg-red-700 shadow-red-600/50 text-white'",
       "pos_code": "? 'bg-red-6 hover:bg-red-700 shadow-red-600/50 text-white'",
-      "css_selector": "footer div:nth-child(2) div:first-child button[class*='shadow-red']",
+      "css_selector": "button[class*='bg-red']",
       "bounding_box": {
         "x": 6,
         "y": 285,
